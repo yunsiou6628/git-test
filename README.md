@@ -7,3 +7,4 @@ Just testing css 練習456
 04.分支-右鍵create branch here創一個分支，+檔名  
 05.上傳檔案  
 06.分支合併-記得點選LOCAL中的main，在Push上傳一次
+07.作業不要用網頁拖拉上傳，使用Git上傳檔案
