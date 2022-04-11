@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      padding-bottom: 100px;
+    }
+
+    .container {
+      width: 75%;
+      background: #ccc;
+      /* padding: 1rem; */
+      margin: 2rem auto;
+      border-radius: 1rem;
+    }
+
+    .pp {
+      background: #000;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .float-left {
+      float: left;
+      margin: 1rem;
+    }
+
+    .clear-left {
+      clear: left;
+    }
+
+    .float-right {
+      float: right;
+      margin: 1rem;
+    }
+
+    .clear-right {
+      clear: right;
+    }
+
+    .clear-both {
+      clear: both;
+    }
+
+    /* 實現三欄式 */
+    .sidebar1 {
+      background: lightcoral;
+      float: left;
+      width: 20%;
+    }
+
+    .content {
+      background: lightskyblue;
+      width: 60%;
+      float: left;
+    }
+
+    .sidebar2 {
+      background: lightgreen;
+      float: left;
+      width: 20%;
+    }
+
+    /* 實現選單 */
+    .menu {
+      width: 75%;
+      background: #000;
+      color: rgb(255, 200, 0);
+      font-size: 1.5rem;
+      list-style: none;
+      padding: 0;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .menu .menu-item {
+      background: rgb(0, 50, 90);
+      width: 16%;
+      padding: 2% 1%;
+      margin: 0 1%;
+      float: left;
+      text-align: center;
+    }
+
+    .menu .menu-item:hover {
+      background: #333;
+      color: yellow;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>特性一:浮動元素會從正常流向獨立出來</h2>
+    <p>獨立出來後，後方元素會在 float 元素下方，後方元素裡面的文字內容會圍繞著 float 元素</p>
+    <h2>float-left</h2>
+    <img class="float-left" src="https://picsum.photos/200/200/?random=10">
+    <p class="pp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora laudantium magnam? Repudiandae placeat ea, optio in minus aliquam
+      non
+      assumenda aperiam mollitia, blanditiis harum aut. Aliquid temporibus quasi aperiam aspernatur error magnam unde, neque saepe, nihil asperiores quaerat
+      consectetur recusandae corrupti? Exercitationem at ullam id aspernatur! Illum non, neque autem exercitationem suscipit, est modi reiciendis enim magni
+      vero voluptatibus vitae quod officiis sunt consectetur atque repellat. Nulla, temporibus! Eos nisi distinctio quod placeat, voluptates hic et!
+      Reprehenderit explicabo modi iure, et, officia nihil quibusdam cum suscipit repellat magnam nobis voluptatum ab rerum quod atque ex neque sapiente esse
+      ipsa!</p>
+    <!-- 清除浮動左側 -->
+    <p class="pp clear-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora laudantium magnam? Repudiandae placeat ea, optio in
+      minus aliquam
+      non
+      assumenda aperiam mollitia, blanditiis harum aut. Aliquid temporibus quasi aperiam aspernatur error magnam unde, neque saepe, nihil asperiores quaerat
+      consectetur recusandae corrupti? Exercitationem at ullam id aspernatur! Illum non, neque autem exercitationem suscipit, est modi reiciendis enim magni
+      vero voluptatibus vitae quod officiis sunt consectetur atque repellat. Nulla, temporibus! Eos nisi distinctio quod placeat, voluptates hic et!
+      Reprehenderit explicabo modi iure, et, officia nihil quibusdam cum suscipit repellat magnam nobis voluptatum ab rerum quod atque ex neque sapiente esse
+      ipsa!</p>
+
+    <hr>
+
+    <h2>float-right</h2>
+    <img class="float-right" src="https://picsum.photos/200/200/?random=10">
+    <p class="pp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora laudantium magnam? Repudiandae placeat ea, optio in minus aliquam
+      non
+      assumenda aperiam mollitia, blanditiis harum aut. Aliquid temporibus quasi aperiam aspernatur error magnam unde, neque saepe, nihil asperiores quaerat
+      consectetur recusandae corrupti? Exercitationem at ullam id aspernatur! Illum non, neque autem exercitationem suscipit, est modi reiciendis enim magni
+      vero voluptatibus vitae quod officiis sunt consectetur atque repellat. Nulla, temporibus! Eos nisi distinctio quod placeat, voluptates hic et!
+      Reprehenderit explicabo modi iure, et, officia nihil quibusdam cum suscipit repellat magnam nobis voluptatum ab rerum quod atque ex neque sapiente esse
+      ipsa!</p>
+    <!-- 清除浮動右側 -->
+    <p class="pp clear-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora laudantium magnam? Repudiandae placeat ea, optio in
+      minus aliquam
+      non
+      assumenda aperiam mollitia, blanditiis harum aut. Aliquid temporibus quasi aperiam aspernatur error magnam unde, neque saepe, nihil asperiores quaerat
+      consectetur recusandae corrupti? Exercitationem at ullam id aspernatur! Illum non, neque autem exercitationem suscipit, est modi reiciendis enim magni
+      vero voluptatibus vitae quod officiis sunt consectetur atque repellat. Nulla, temporibus! Eos nisi distinctio quod placeat, voluptates hic et!
+      Reprehenderit explicabo modi iure, et, officia nihil quibusdam cum suscipit repellat magnam nobis voluptatum ab rerum quod atque ex neque sapiente esse
+      ipsa!</p>
+
+    <hr>
+
+    <h2>float-left 和 float-right</h2>
+    <img class="float-left" src="https://picsum.photos/200/200/?random=1">
+    <img class="float-right" src="https://picsum.photos/200/200/?random=2">
+    <p class="pp clear-both">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora laudantium magnam? Repudiandae placeat ea, optio in
+      minus aliquam
+      non
+      assumenda aperiam mollitia, blanditiis harum aut. Aliquid temporibus quasi aperiam aspernatur error magnam unde, neque saepe, nihil asperiores quaerat
+      consectetur recusandae corrupti? Exercitationem at ullam id aspernatur! Illum non, neque autem exercitationem suscipit, est modi reiciendis enim magni
+      vero voluptatibus vitae quod officiis sunt consectetur atque repellat. Nulla, temporibus! Eos nisi distinctio quod placeat, voluptates hic et!
+      Reprehenderit explicabo modi iure, et, officia nihil quibusdam cum suscipit repellat magnam nobis voluptatum ab rerum quod atque ex neque sapiente esse
+      ipsa!Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora laudantium magnam? Repudiandae placeat ea, optio in
+      minus aliquam
+      non
+      assumenda aperiam mollitia, blanditiis harum aut. Aliquid temporibus quasi aperiam aspernatur error magnam unde, neque saepe, nihil asperiores quaerat
+      consectetur recusandae corrupti? Exercitationem at ullam id aspernatur! Illum non, neque autem exercitationem suscipit, est modi reiciendis enim magni
+      vero voluptatibus vitae quod officiis sunt consectetur atque repellat. Nulla, temporibus! Eos nisi distinctio quod placeat, voluptates hic et!
+      Reprehenderit explicabo modi iure, et, officia nihil quibusdam cum suscipit repellat magnam nobis voluptatum ab rerum quod atque ex neque sapiente esse
+      ipsa!</p>
+  </div>
+
+  <div class="container" style="overflow: hidden;">
+    <h2>特性二:浮動會區塊化元素</h2>
+    <ul>
+      <li>將元素轉型為 block。</li>
+      <li>由於脫離正常流向獨立，會影響父元素無法包覆浮動元素，若父元素沒有內容或padding，會造成父元素高度完全消失。</li>
+      <li>父元素設定 overflow:hidden 可以讓浮動元素再次被包覆。</li>
+    </ul>
+    <span style="float:left">我是 span，誕生時為 inline，float 變成 block</span>
+    <button style="float:right">我是 button，誕生時為 inline-block，float 變成 block</button>
+  </div>
+
+  <div class="container" style="overflow: hidden;">
+    <h2>特性三:float 是區塊格式上下文家族成員之一(Block formatting context - BFC)</h2>
+    <ol>
+      <li>BFC 擁有不被外界影響的特性，加上 float 自身的流動性，早期被拿來排版。</li>
+      <li>缺點在設計多欄時會有高度不一的問題，在 Flexbox 彈性盒獲得解決。</li>
+    </ol>
+
+    <h3>實現三欄式</h3>
+    <div class="sidebar1">
+      sidebar1
+      並不效率性感隊伍則是，更好告訴你相關其中劇情，都說培訓並在要是地位不願意的說年度回覆最近大廈認定，但我相關全文收益就是規劃生成組成等待，採用承受團體然後青春蔬菜，引進確實網際大哥職位蘋果先進大部分亞洲還沒，求助相比台北互相晶片裝置焦點需要，不用最高究竟近。
+      並不效率性感隊伍則是，更好告訴你相關其中劇情，都說培訓並在要是地位不願意的說年度回覆最近大廈認定，但我相關全文收益就是規劃生成組成等待，採用承受團體然後青春蔬菜，引進確實網際大哥職位蘋果先進大部分亞洲還沒，求助相比台北互相晶片裝置焦點需要，不用最高究竟近。
+    </div>
+    <div class="content">
+      content
+      感動領先是什麼再次好像權利現在不停，越來越觀點崗位排行一對不想無數製品到達普遍準備首先大戰找到，恢復素質氣息姓名同志首先訪問去年行情定位對面虛擬這裡夫妻，軟體此處標題，授權交流意見集團也要女人成功還沒有界面，程式漂亮特點為什麼社會起來發佈經銷商，一聲每年一般瞭解交易友情保證，成就兒子股份有限公司此刻魯蛇，講話一番互動遠程外掛僅僅驚訝遇到購買標準，獲得把你案件才是成績咖啡我去初音，禁止單位，房間醫院理想果然讓她減少證據廠商尋找夫人人大，我想正式財富室內你看明白那是論壇理解名單年輕人令人，全部樓上重視理想就業結果企業記住早已超級生存在他分享看過，頻率空中智能關於篇文章原始碼天地下了零售為此一級廣泛誘惑，論文各位很少我的成績越來越天然建設重視完善任何人，名稱裝置知名營銷感興趣小區常見全面上午會議導航，核心西方處罰以下留言足夠刪除生成，這時本頁筆記本字體我在程式試試獲取新浪國務院妻子瀏覽，超市前進風格故障本週規格有人擴大偉大哪些定義，只有默認正常照顧專輯完善對象知名電力感到風情照顧擔任，圖形外面用途反而期限最高著名崇拜樹林證書凱文，首先用於文章手續國內圍繞這麼多，導航造成國外聽到網路，保障尺。
+      感動領先是什麼再次好像權利現在不停，越來越觀點崗位排行一對不想無數製品到達普遍準備首先大戰找到，恢復素質氣息姓名同志首先訪問去年行情定位對面虛擬這裡夫妻，軟體此處標題，授權交流意見集團也要女人成功還沒有界面，程式漂亮特點為什麼社會起來發佈經銷商，一聲每年一般瞭解交易友情保證，成就兒子股份有限公司此刻魯蛇，講話一番互動遠程外掛僅僅驚訝遇到購買標準，獲得把你案件才是成績咖啡我去初音，禁止單位，房間醫院理想果然讓她減少證據廠商尋找夫人人大，我想正式財富室內你看明白那是論壇理解名單年輕人令人，全部樓上重視理想就業結果企業記住早已超級生存在他分享看過，頻率空中智能關於篇文章原始碼天地下了零售為此一級廣泛誘惑，論文各位很少我的成績越來越天然建設重視完善任何人，名稱裝置知名營銷感興趣小區常見全面上午會議導航，核心西方處罰以下留言足夠刪除生成，這時本頁筆記本字體我在程式試試獲取新浪國務院妻子瀏覽，超市前進風格故障本週規格有人擴大偉大哪些定義，只有默認正常照顧專輯完善對象知名電力感到風情照顧擔任，圖形外面用途反而期限最高著名崇拜樹林證書凱文，首先用於文章手續國內圍繞這麼多，導航造成國外聽到網路，保障尺。
+    </div>
+    <div class="sidebar2">
+      sidebar1
+      並不效率性感隊伍則是，更好告訴你相關其中劇情，都說培訓並在要是地位不願意的說年度回覆最近大廈認定，但我相關全文收益就是規劃生成組成等待，採用承受團體然後青春蔬菜，引進確實網際大哥職位蘋果先進大部分亞洲還沒，求助相比台北互相晶片裝置焦點需要，不用最高究竟近。
+    </div>
+
+    <h3 style="clear:both">實現選單</h3>
+    <ul class="menu">
+      <li class="menu-item">item</li>
+      <li class="menu-item">item</li>
+      <li class="menu-item">item</li>
+      <li class="menu-item">item</li>
+      <li class="menu-item">item</li>
+    </ul>
+  </div>
+
+
+</body>
+
+</html>

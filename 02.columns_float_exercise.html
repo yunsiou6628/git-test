@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 使用 float 設計一個 960px 三欄水平置中的版型 */
+    .container {
+      width: 960px;
+      margin: auto;
+      background: rgb(200, 250, 244);
+      /* overflow: hidden; */
+    }
+
+    .col {
+      width: 270px;
+      float: left;
+      padding: 10px;
+      margin: 10px;
+      border: 5px solid rgb(255, 200, 0);
+    }
+
+    .col img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col">
+      <img src="https://picsum.photos/800/600/?random=1">
+      <h1>title</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veritatis blanditiis corrupti omnis, aspernatur officiis voluptas illo deleniti eius
+        nam, animi quidem quae quia, laboriosam odit necessitatibus. Sapiente, amet vitae!</p>
+    </div>
+    <div class="col">
+      <img src="https://picsum.photos/800/600/?random=2">
+      <h1>title</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veritatis blanditiis corrupti omnis, aspernatur officiis voluptas illo deleniti eius
+        nam, animi quidem quae quia, laboriosam odit necessitatibus. Sapiente, amet vitae!</p>
+    </div>
+    <div class="col">
+      <img src="https://picsum.photos/800/600/?random=2">
+      <h1>title</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veritatis blanditiis corrupti omnis, aspernatur officiis voluptas illo deleniti eius
+        nam, animi quidem quae quia, laboriosam odit necessitatibus. Sapiente, amet vitae!</p>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</body>
+
+</html>
