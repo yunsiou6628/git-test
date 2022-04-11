@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            background: black;
+            border-radius: 50%;
+            margin: auto;
+            position: relative;
+            top: 200px;
+        }
+
+        .container::before{
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: auto;
+            position: absolute;
+            border-radius: 50%;
+            top: 40%;
+            left: -30px;
+        }
+
+        .container::after{
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: auto;
+            position: absolute;
+            border-radius: 50%;
+            top: 40%;
+            left: 330px;
+        }
+
+        .box{
+            width: 200px;
+            height: 150px;
+            background: white;
+            margin: auto;
+            border-radius: 50%;
+            position: relative;
+            top: 37%;
+        }
+
+        .box::before{
+            content: '';
+            width: 130px;
+            height: 50px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            margin: auto;
+            top: 73px;
+            left: 35px;
+        }
+
+        .box::after{
+            content: '';
+            width: 55px;
+            height: 38px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            margin: auto;
+            top: 12px;
+            left: 73px;
+        }
+
+        .box-shadow1{
+            width: 80px;
+            height: 80px;
+            background: white;
+            margin: auto;
+            border-radius: 50%;
+            position: relative;
+            top: -65px;
+            left: -90px;
+            /* 問題：有沒有比較快速的垂直設定方法，如果之後遇到RWD可能會跑版 */
+            box-shadow: 
+            180px 0px 0px 0px rgb(255, 255, 255); 
+            z-index: 1;
+        }
+
+        .box-shadow1::before{
+            content: '';
+            width: 55px;
+            height: 55px;
+            background: black;
+            border: white;
+            margin: auto;
+            border-radius: 50%;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            box-shadow: 
+            180px 0px 0px 0px rgb(0, 0, 0); 
+            z-index: 2;
+        }
+
+        .box-shadow2{
+            width: 70px;
+            height: 70px;
+            background: rgb(0, 0, 0);
+            margin: auto;
+            border-radius: 50%;
+            position: relative;
+            top: -220px;
+            left: -130px;
+            /* 問題：有沒有比較快速的垂直設定方法，如果之後遇到RWD可能會跑版 */
+            box-shadow: 
+            260px 0px 0px 0px rgb(0, 0, 0); 
+            z-index: 1;
+        }
+
+        .box-shadow2::before{
+            content: '';
+            width: 45px;
+            height: 45px;
+            background: rgb(255, 255, 255);
+            margin: auto;
+            border-radius: 50%;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            box-shadow: 
+            260px 0px 0px 0px rgb(255, 255, 255); 
+            z-index: 2;
+        }
+
+        .box-shadow3{
+            width: 40px;
+            height: 50px;
+            background: rgb(255, 255, 255);
+            margin: auto;
+            position: relative;
+            top: 30px;
+            left: 0px;
+            transform-origin:bottom;
+            transform:skewX(45deg);
+        }
+
+        .box-shadow4{
+            width: 40px;
+            height: 50px;
+            background: rgb(255, 255, 255);
+            margin: auto;
+            position: relative;
+            top: -20px;
+            left: 0px;
+            transform-origin: bottom;
+            transform: skewX(-45deg);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box-shadow1"></div>
+            <div class="box-shadow2"></div>
+            <div class="box-shadow3"></div>
+            <div class="box-shadow4"></div>
+        </div>
+    </div>
+
+
+</body>
+</html>
